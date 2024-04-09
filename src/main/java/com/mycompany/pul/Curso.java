@@ -11,23 +11,33 @@ package com.mycompany.pul;
 import java.util.TreeSet;
 
 /**
- *
- * @author ProfDiurno
+ * Esta es la clase donde se representa un curso donde se matriculan las personas
+ * @author flavich16
+ * version 1.0
  */
 public class Curso {
 
     private String nombre;
     private TreeSet<Persona> listaAlumnos;
+    /*
+    
+    Metodo getter para poder obetner el nombre del curso
+    *@return El nombre del curso
+    */
 
     protected String getNombre() {
         return nombre;
     }
-
+    /*Constructorque tiene que crear un instancia de curso con un nombre dado*
+    @param nombre Este es el nombre que se asignara al curso*/
     public Curso(String nombre) {
         this.nombre = nombre;
         listaAlumnos = new TreeSet<>();
     }
-
+     /**
+     * Genera una representación en forma de cadena del objeto Curso.
+     * @return Una representación en cadena del curso y sus alumnos.
+     */
     @Override
     public String toString() {
         String s = "--------------------" + nombre + "-----------------\n";
@@ -38,7 +48,10 @@ public class Curso {
         }
         return s;
     }
-
+    /**
+     * Añade un nuevo alumno al curso.
+     * @param p El alumno que se va a añadir.
+     */
     public void aniadirAlumno(Persona p) {
         listaAlumnos.add(p);
     }

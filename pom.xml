@@ -11,4 +11,5 @@
         <maven.compiler.target>19</maven.compiler.target>
         <exec.mainClass>com.mycompany.pul.Pul</exec.mainClass>
     </properties>
+    <name>Instituto</name>
 </project>
